@@ -1,0 +1,125 @@
+Read file: ./m1.json
+States: q1 q2 q3
+Alphabet: 0 1
+Start state: q1
+Final states: q2
+Transition: q1 0 q1
+Transition: q1 1 q2
+Transition: q2 0 q3
+Transition: q2 1 q2
+Transition: q3 0 q2
+Transition: q3 1 q2
+00011
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Accept state: q2
+ACCEPT
+00100
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 0
+Next state: q3
+Processing letter: 0
+Next state: q2
+Accept state: q2
+ACCEPT
+00000
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+NOT ACCEPT
+11111
+Start state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Accept state: q2
+ACCEPT
+01010
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 0
+Next state: q3
+Processing letter: 1
+Next state: q2
+Processing letter: 0
+Next state: q3
+NOT ACCEPT
+00201
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Invalid character: 2. Reject.
+NOT ACCEPT
+11100
+Start state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 0
+Next state: q3
+Processing letter: 0
+Next state: q2
+Accept state: q2
+ACCEPT
+00a11
+Start state: q1
+Processing letter: 0
+Next state: q1
+Processing letter: 0
+Next state: q1
+Invalid character: a. Reject.
+NOT ACCEPT
+110011
+Start state: q1
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 0
+Next state: q3
+Processing letter: 0
+Next state: q2
+Processing letter: 1
+Next state: q2
+Processing letter: 1
+Next state: q2
+Accept state: q2
+ACCEPT

@@ -1,0 +1,41 @@
+{
+    "alphabet": ["a","b","c"],
+    "comment_0": "Characters other than a and c are treated as b to save space and effort.",
+    "states": 
+    [
+        {
+            "name": "a*",
+            "transitions": 
+            {
+                "a": ["a*","a*."],
+                "b": ["a*."],
+                "c": ["a*."]
+            },
+            "start": true,
+            "accept": false
+        },
+        {
+            "name": "a*.",
+            "transitions": 
+            {
+                "c": ["a*.c"]
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "a*.c",
+            "transitions": 
+            {
+            },
+            "start": false,
+            "accept": true
+        }
+    ],
+    "_accept1": "ac",
+    "_accept2": "cc",
+    "_accept3": "aaaaaaaabc",
+    "_reject1": "abca",
+    "_reject2": "bbc",
+    "_reject3": "c"
+}

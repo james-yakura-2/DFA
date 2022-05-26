@@ -1,0 +1,90 @@
+{
+    "alphabet": ["a","b","c"],
+    "comment_0": "Characters other than a and c are treated as b to save space and effort.",
+    "states": 
+    [
+        {
+            "name": "epsilon",
+            "transitions": 
+            {
+                "a": "a*a",
+                "b": "a*.",
+                "c": "a*c"
+            },
+            "start": true,
+            "accept": false
+        },
+        {
+            "name": "a*a",
+            "transitions": 
+            {
+                "a": "a*a",
+                "b": "a*.",
+                "c": "a*ac"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "a*.",
+            "transitions": 
+            {
+                "a": "FAIL",
+                "b": "FAIL",
+                "c": "a*.c"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "a*c",
+            "transitions": 
+            {
+                "a": "FAIL",
+                "b": "FAIL",
+                "c": "a*.c"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "a*ac",
+            "transitions": 
+            {
+                "a": "FAIL",
+                "b": "FAIL",
+                "c": "a*.c"
+            },
+            "start": false,
+            "accept": true
+        },
+        {
+            "name": "a*.c",
+            "transitions": 
+            {
+                "a": "FAIL",
+                "b": "FAIL",
+                "c": "FAIL"
+            },
+            "start": false,
+            "accept": true
+        },
+        {
+            "name": "FAIL",
+            "transitions": 
+            {
+                "a": "FAIL",
+                "b": "FAIL",
+                "c": "FAIL"
+            },
+            "start": false,
+            "accept": false
+        }
+    ],
+    "_accept1": "ac",
+    "_accept2": "cc",
+    "_accept3": "aaaaaaaabc",
+    "_reject1": "abca",
+    "_reject2": "bbc",
+    "_reject3": "c"
+}

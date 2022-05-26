@@ -1,0 +1,52 @@
+{
+    "alphabet": ["0","1"],
+    "states": 
+    [
+        {
+            "name": "0",
+            "transitions": 
+            {
+                "0": "0",
+                "1": "1"
+            },
+            "start": true,
+            "accept": false
+        },
+        {
+            "name": "1",
+            "transitions": 
+            {
+                "0": "1",
+                "1": "2"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "2",
+            "transitions": 
+            {
+                "0": "2",
+                "1": "3"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "3",
+            "transitions": 
+            {
+                "0": "3",
+                "1": "3"
+            },
+            "start": false,
+            "accept": true
+        }
+    ],
+    "_accept1": "111",
+    "_accept2": "0111",
+    "_accept3": "010101",
+    "_reject1": "",
+    "_reject2": "110",
+    "_reject3": "0101"
+}

@@ -1,0 +1,52 @@
+{
+    "alphabet": ["0","1"],
+    "states": 
+    [
+        {
+            "name": "s",
+            "transitions": 
+            {
+                "0": "s",
+                "1": "1"
+            },
+            "start": true,
+            "accept": true
+        },
+        {
+            "name": "1",
+            "transitions": 
+            {
+                "0": "s",
+                "1": "11"
+            },
+            "start": false,
+            "accept": true
+        },
+        {
+            "name": "11",
+            "transitions": 
+            {
+                "0": "110",
+                "1": "11"
+            },
+            "start": false,
+            "accept": true
+        },
+        {
+            "name": "110",
+            "transitions": 
+            {
+                "0": "110",
+                "1": "110"
+            },
+            "start": false,
+            "accept": false
+        }
+    ],
+    "_accept1": "111",
+    "_accept2": "011",
+    "_accept3": "1010101010101",
+    "_reject1": "110",
+    "_reject2": "111111110",
+    "_reject3": "110000000"
+}

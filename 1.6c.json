@@ -1,0 +1,62 @@
+{
+    "alphabet": ["0","1"],
+    "states": 
+    [
+        {
+            "name": "s",
+            "transitions": 
+            {
+                "0": "0",
+                "1": "s"
+            },
+            "start": true,
+            "accept": false
+        },
+        {
+            "name": "0",
+            "transitions": 
+            {
+                "0": "0",
+                "1": "01"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "01",
+            "transitions": 
+            {
+                "0": "010",
+                "1": "s"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "010",
+            "transitions": 
+            {
+                "0": "0",
+                "1": "0101"
+            },
+            "start": false,
+            "accept": false
+        },
+        {
+            "name": "0101",
+            "transitions": 
+            {
+                "0": "0101",
+                "1": "0101"
+            },
+            "start": false,
+            "accept": true
+        }
+    ],
+    "_accept1": "0101",
+    "_accept2": "001011",
+    "_accept3": "11010100",
+    "_reject1": "",
+    "_reject2": "1010",
+    "_reject3": "1101"
+}
